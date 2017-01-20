@@ -1,0 +1,13 @@
+﻿@model IEnumerable<BOL.Course>
+
+<table class="table table-bordered table-striped">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Name, "CourseSelected", new { id = item.Course_ID })
+            </td>
+        </tr>
+    }
+</table>

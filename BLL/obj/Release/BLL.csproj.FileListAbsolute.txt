@@ -1,0 +1,11 @@
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\BLL.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\BLL.pdb
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\BOL1.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\DAL.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\EntityFramework.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\BOL1.pdb
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\DAL.pdb
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\bin\Release\EntityFramework.xml
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\obj\Release\BLL.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\BLL\obj\Release\BLL.pdb

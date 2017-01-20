@@ -1,0 +1,86 @@
+﻿@model IEnumerable<BOL.Quiz_Question>
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "QuizDetails";
+}
+
+<script>
+    function showAlertForDeleteConfirmation(id) {
+        if (confirm('Do you want to delete this question?')) {
+            window.location.href = '@Url.Action("DeleteQuestion", "Quiz")/' + id;
+        } else {
+            // Do nothing!
+        }
+    }
+</script>
+
+<h2>QuizDetails</h2>
+@if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+{
+    <p>
+        @Html.ActionLink("Create New", "CreateNewQuestion", new { quizId = ViewBag.CurrentQuizId })
+    </p>
+}
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Option_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Option_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Option_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Option_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+
+        @if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+        {
+            <th></th>
+        }
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+        @if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+        {
+            <td>
+                @Html.ActionLink("Edit", "EditQuizQuestion", new { id = item.Quiz_Question_ID }) |
+                <a onclick="showAlertForDeleteConfirmation('@item.Quiz_Question_ID');">Delete</a>
+            </td>
+        }
+    </tr>
+}
+
+</table>

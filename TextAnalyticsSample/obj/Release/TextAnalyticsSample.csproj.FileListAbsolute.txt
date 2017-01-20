@@ -1,0 +1,15 @@
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Release\TextAnalyticsSample.dll.config
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Release\TextAnalyticsSample.dll
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Release\TextAnalyticsSample.pdb
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Release\Newtonsoft.Json.dll
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Release\Newtonsoft.Json.xml
+C:\Users\Vignesh\Music\TextAnalyticsSample\obj\Release\TextAnalyticsSample.dll
+C:\Users\Vignesh\Music\TextAnalyticsSample\obj\Release\TextAnalyticsSample.pdb
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Release\TextAnalyticsSample.dll.config
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Release\TextAnalyticsSample.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Release\TextAnalyticsSample.pdb
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Release\Newtonsoft.Json.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Release\Newtonsoft.Json.xml
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\obj\Release\TextAnalyticsSample.csprojResolveAssemblyReference.cache
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\obj\Release\TextAnalyticsSample.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\obj\Release\TextAnalyticsSample.pdb

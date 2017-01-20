@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@model List<Object>
+
+@{ 
+    List<BOL.Quiz_Question> questions = Model.ElementAt(0) as List<BOL.Quiz_Question>;
+    List<List<int>> stats = Model.ElementAt(1) as List<List<int>>;
+    int eligible_Students = int.Parse(Model.ElementAt(2).ToString());
+}
+
+
+
+@{
+    ViewBag.Title = "Statistics";
+}
+
+<h2>Statistics</h2>
+
+<br />
+
+    @{ int i = 0; }
+    @foreach (var item in questions)
+        {
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th colspan="2">
+                    @(questions.IndexOf(item) + 1). 
+                    @Html.DisplayName(item.Question.ToString())
+                </th>
+            </tr>
+            <tr  style="background-color : transparent ">
+                <td width="70%">
+                    1. 
+                    @Html.DisplayName(item.Option_1.ToString()) 
+                </td>
+                <td>
+                    @Html.DisplayName("  Stat: " + stats.ElementAt(i).ElementAt(0).ToString() + " of " + eligible_Students.ToString() + " students")
+                </td>
+            </tr>
+            <tr style="background-color : transparent ">
+                <td>
+                    2. 
+                    @Html.DisplayName(item.Option_2.ToString())
+                </td>
+                <td>
+                    @Html.DisplayName("  Stat: " + stats.ElementAt(i).ElementAt(1).ToString() + " of " + eligible_Students.ToString() + " students")
+                </td>
+            </tr>
+            <tr style="background-color : transparent ">
+                <td>
+                    3. 
+                    @Html.DisplayName(item.Option_3.ToString())
+                </td>
+                <td>
+                    @Html.DisplayName("  Stat: " + stats.ElementAt(i).ElementAt(2).ToString() + " of " + eligible_Students.ToString() + " students") 
+                </td>
+            </tr>
+            <tr style="background-color : transparent ">
+                <td>
+                    4. 
+                    @Html.DisplayName(item.Option_4.ToString())
+                </td>
+                <td>
+                    @Html.DisplayName("  Stat: " + stats.ElementAt(i).ElementAt(3).ToString() + " of " + eligible_Students.ToString() + " students") 
+                </td>
+            </tr>
+        </table>
+        i=i+1;
+    }
+    

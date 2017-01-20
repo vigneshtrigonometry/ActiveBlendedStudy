@@ -1,0 +1,25 @@
+﻿@model IEnumerable<BOL.Forum_Answer>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            Post
+        </th>
+        <th>
+           User
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Name)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,19 @@
+﻿@model List<Object> 
+
+@{ 
+    BOL.Quiz quiz = Model.ElementAt(0) as BOL.Quiz;
+    BOL.Schedule schedule= Model.ElementAt(1) as BOL.Schedule;
+}
+
+@{
+    ViewBag.Title = "RepostQuiz";
+}
+<h2>RepostQuiz</h2>
+
+<h5> You're about to repost a Quiz with <br />TITLE: @quiz.Name <br /> COURSE: @quiz.Course.Name <br /> SCHEDULE: @schedule.Schedule_Name <br /> </h5>
+
+@using (Html.BeginForm("RepostQuiz", "Quiz", new { id = quiz.Quiz_ID, user = Session["User_ID"].ToString(), FormMethod.Post }))
+{
+    <input type="submit" value="Confirm Repost"/>
+}
+

@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@model IEnumerable<BOL.Material>
+
+@{
+    ViewBag.Title = "Material";
+}
+
+<script>
+    function showAlertForRepostConfirmation(id) {
+        if (confirm('Do you want to repost this material for the current schedule?')) {
+            window.location.href = '@Url.Action("Repost", "Material")/' + id;
+        } else {
+            // Do nothing!
+        }
+    }
+</script>
+
+<h2>Material</h2>
+@{
+    if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+    {
+        if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+        {
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+            }
+        }
+    }
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Link)
+        </th>
+        @if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+        {
+            <th></th>
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                <a href='@string.Format(@item.Link)' target="_blank">@item.Link</a>
+            </td>
+
+            @if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+            {
+                if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Material_ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Material_ID })
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a onclick="showAlertForRepostConfirmation('@item.Material_ID');">Repost</a>
+                    </td>
+                }
+            }
+        </tr>
+    }
+</table>

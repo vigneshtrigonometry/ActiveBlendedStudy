@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<script>
+    function clearBox()
+    {
+        document.getElementById("account").value = "";
+    }
+</script>
+
+
+<div id="table">
+    @Html.Action("PostForumAnswer", new { id = ViewBag.Id, newPost = "" })
+</div>
+
+<div>
+    @using (Ajax.BeginForm("PostForumAnswer", "Forum", new { id = ViewBag.Id }, new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "table",
+        OnSuccess = "clearBox()"
+
+    }
+
+))
+    {
+        <input id="account" type="text" name="newPost" />
+        <input type="submit" value="Comment" onmouseover="GetEmotion()"/> 
+    }
+</div>
+<div id="Analytics">
+    
+    </div>
+<div>
+    <a href="#" onclick ="GetEmotion();">Click to get mood.</a>
+</div>
+
+<script>
+        function GetEmotion()
+        {
+                var val = document.getElementById('account').value;
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("GetMachineLearningData", "Forum")',
+                data: { inputText: val },
+                success: function (url) { document.getElementById('Analytics').innerHTML = url; }
+            });
+                
+        }
+</script>
+
+<br />
+<br />
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

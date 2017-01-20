@@ -1,0 +1,10 @@
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\bin\Debug\BOL1.dll
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\bin\Debug\BOL1.pdb
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\obj\Debug\BOL1.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\obj\Debug\BOL1.dll
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\obj\Debug\BOL1.pdb
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\bin\Debug\BOL1.dll.config
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\Projects\NUS_ActiveBlendedStudy\ActiveBlendedStudy\BOL1\bin\Debug\EntityFramework.SqlServer.xml

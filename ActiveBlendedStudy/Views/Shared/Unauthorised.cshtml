@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Unauthorised";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+
+@if (Session["Role"] == null)
+{
+<h2> You need to be logged in to access this page</h2>
+@Html.ActionLink("CLICK HERE TO LOGIN", "Login", "Home")
+}
+else if (Session["Role"].ToString().ToUpper().Equals("STUDENT"))
+{
+    <h2>You need to login as a Staff to access this page </h2>
+    @Html.ActionLink("CLICK HERE TO LOGIN", "Login", "Home")
+}
+else if(Session["Role"].ToString().ToUpper().Equals("STUDENT"))
+{
+    <h2> You need to be logged in as a student to access this page</h2>
+    @Html.ActionLink("CLICK HERE TO LOGIN", "Login", "Home")
+}
+else
+{
+    <h2> A technical error occured. Please login again or go back.</h2>
+    @Html.ActionLink("CLICK HERE TO LOGIN", "Login", "Home")
+}
+
+

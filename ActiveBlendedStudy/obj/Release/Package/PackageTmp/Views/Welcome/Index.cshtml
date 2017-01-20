@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BOL.Course>
+@{
+    Layout = "~/Views/Shared/Course.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Courses";
+}
+
+<div></div>
+@{
+    if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+    {
+        <div class="text-right" style="float:right">
+
+            <h4 style="float:left">Schedule</h4>
+
+            @using (Ajax.BeginForm("Index", "Welcome", new AjaxOptions
+            {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "Post",
+            UpdateTargetId = "resultTarget"
+            }))
+            {
+            @Html.DropDownList("Schedule_ID", (SelectList)ViewBag.Schedules, new { @onchange = "$(this.form).submit();" })
+            }
+            <div></div>
+        </div>
+    }
+}
+<div></div>
+<h4>List of enrolled courses.</h4>
+<div id="resultTarget"> 
+    @Html.Partial("~/Views/Welcome/_IndexPartial.cshtml", Model)
+</div>

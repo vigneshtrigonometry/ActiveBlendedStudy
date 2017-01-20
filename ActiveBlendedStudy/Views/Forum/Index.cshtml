@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@model IEnumerable<BOL.Forum>
+
+
+<h2>Forum</h2>
+@{
+    if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+    {
+        if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+        {
+        <p>
+            @Html.ActionLink("Create New Forum", "Create")
+        </p>
+            }
+        }
+    }
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Topic)
+        </th>
+        @if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+        {
+            if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+            {
+            <th></th>
+            }
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Topic, "DisplayForumPosts", new { id = item.Forum_ID })
+            </td>
+            @if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+            {
+                if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+                {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Forum_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Forum_ID })
+                </td>
+                }
+            }
+        </tr>
+    }
+
+</table>

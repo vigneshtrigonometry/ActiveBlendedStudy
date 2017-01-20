@@ -1,0 +1,18 @@
+﻿@model BOL.Quiz_Question
+
+<fieldset class="scheduler-border">
+    @Html.HiddenFor(model => model.Quiz_Question_ID, new { questionId = Model.Quiz_Question_ID })
+    <legend class="scheduler-border">@Model.Question</legend>
+    <div class="radio">
+        <label><input type="radio" name="answer" value="Option_1" required>@Model.Option_1</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="answer" value="Option_2">@Model.Option_2</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="answer" value="Option_3">@Model.Option_3</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="answer" value="Option_4">@Model.Option_4</label>
+    </div>
+</fieldset>

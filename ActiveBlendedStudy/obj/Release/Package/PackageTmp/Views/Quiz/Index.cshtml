@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@model IEnumerable<BOL.Quiz>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    function showAlertForRepostConfirmation(id) {
+        if (confirm('Do you want to repost this quiz for the current schedule?')) {
+            window.location.href = '@Url.Action("RepostQuiz", "Quiz")/' + id;
+        } else {
+            // Do nothing!
+        }
+    }
+</script>
+
+<h2>Quiz</h2>
+@{
+    if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+    {
+        if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+        {
+            <p>
+                @Html.ActionLink("Create New Quiz", "Create")
+            </p>
+        }
+    }
+}
+<table class="table table-bordered table-striped">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Name, "QuizSelected", new { id = item.Quiz_ID })
+            </td>
+            @if (Session["Role"].ToString().ToUpper().Equals("STAFF"))
+            {
+                if (ViewBag.IsCurrentSchedule.ToString().ToLower().Equals("true"))
+                {
+                    <td>
+                        @Html.ActionLink("Stats", "Statistics", new { id = item.Quiz_ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Quiz_ID })
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.ActionLink("Stats", "Statistics", new { id = item.Quiz_ID }) |
+                        <a onclick="showAlertForRepostConfirmation('@item.Quiz_ID');">Repost</a>
+                    </td>
+                }
+            }
+</tr>
+            }
+
+</table>

@@ -1,0 +1,5 @@
+1.	For each public method, we need to check for the role.
+	This will make sure that another user does not access the public methods.
+2.	Handle multiple schedule scenario
+	The user will not be allowed to do CRUD operations if it is a previous schedule
+3.	

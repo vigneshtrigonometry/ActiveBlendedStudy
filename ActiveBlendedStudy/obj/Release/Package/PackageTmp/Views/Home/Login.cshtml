@@ -1,0 +1,27 @@
+﻿@model BOL.User
+@{
+    ViewBag.Title = "Index";
+}
+
+@section styles {
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginStyle.css" />
+}
+<div class="wrapper">
+@using (Html.BeginForm("Login", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-signin", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+        <h2 class="form-signin-heading">LOGIN</h2>
+        <br>
+        @Html.TextBoxFor(m => m.User_ID, new { @class = "form-control",placeholder ="User ID" })
+        @Html.ValidationMessageFor(m => m.User_ID, "", new { @class = "text-danger" })
+         <br>
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+    <br>
+        <input type="submit" value="Log in" class="btn btn-lg btn-primary btn-block" />
+}
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

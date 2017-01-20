@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Notify";
+}
+
+<h2>Send Notifications to all</h2>
+
+ 
+ <input id="notifText" type="text" />
+<input id="tagg" type="text" />
+ <input type="submit" value="Submit" onclick ="SubmitNotification();" />
+<div id="status"/>
+
+<script>
+    function SubmitNotification()
+    {
+        var val = document.getElementById('notifText').value;
+        var tagVal = document.getElementById('tagg').value;
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("Notify", "Home")',
+            data: { mytag:tagVal,text: val  },
+            success: function (url) { document.getElementById('status').innerHTML = url; }
+        });
+    }
+</script>
+

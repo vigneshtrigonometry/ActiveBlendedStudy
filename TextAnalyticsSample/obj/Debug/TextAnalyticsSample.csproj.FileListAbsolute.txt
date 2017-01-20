@@ -1,0 +1,23 @@
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.exe.config
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.exe
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.pdb
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.csprojResolveAssemblyReference.cache
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.exe
+C:\Users\Premraj M\Desktop\New folder\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.pdb
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.dll.config
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.dll
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.pdb
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Vignesh\Music\TextAnalyticsSample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Vignesh\Music\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.csprojResolveAssemblyReference.cache
+C:\Users\Vignesh\Music\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.dll
+C:\Users\Vignesh\Music\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.pdb
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.dll.config
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Debug\TextAnalyticsSample.pdb
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.dll
+C:\Users\Vignesh\Source\Repos\nus_activeblendedstudy_cloud10ft\ActiveBlendedStudy\TextAnalyticsSample\obj\Debug\TextAnalyticsSample.pdb

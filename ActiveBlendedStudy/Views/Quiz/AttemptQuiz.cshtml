@@ -1,0 +1,44 @@
+﻿@model BOL.Quiz
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "AttemptQuiz";
+}
+
+<script type="text/javascript">
+function hideSubmitButtonAfterQuizCompletion(){
+    document.getElementById("submit").style.display = "none";
+    document.getElementById("quizQuestion").innerHTML = "Quiz Submitted!";
+}
+</script>
+
+<h2>AttemptQuiz</h2>
+@if (Model != null)
+{
+    <div>
+        @using (Ajax.BeginForm("GetQuizQuestion", "Quiz", new { quizId = Model.Quiz_ID }, new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "quizQuestion"
+        }))
+        {
+            <div id="quizQuestion">
+                @{Html.RenderAction("GetQuizQuestion", "Quiz", new { quiz = Model });}
+            </div>
+                    if (!(ViewBag.HideSubmitButton.ToString().ToLower() == "true"))
+                    {
+                        <input id="submit" type="submit" value="Submit" />
+                        }
+                    }
+    </div>
+                    }
+                    else
+                    {
+                        <div>You have already submitted the Quiz!</div>
+                    }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
